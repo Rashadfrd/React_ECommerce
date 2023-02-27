@@ -1,10 +1,12 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import {AiOutlineClose} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import CartButtons from './CartButtons'
 import { links } from '../utils/constants'
 import { useProductsContext } from '../context/products_context'
+
 
 const SideBar = () => {
     const {state,dispatch} = useProductsContext();
@@ -14,8 +16,9 @@ const SideBar = () => {
             val:false
         })
     }
-
   return (
+    <>
+    {ReactDOM.createPortal(
     <SidebarElement>
         <aside className={state.isSidebarOpen === true ? 'sidebar-active' : undefined}>
         <div className="container">
@@ -34,7 +37,10 @@ const SideBar = () => {
                 <CartButtons />
         </div>
         </aside>
-    </SidebarElement>
+    </SidebarElement>,
+    document.getElementById('sideBar')
+    )}
+    </>
   )
 }
 
