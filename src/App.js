@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import About from './pages/About';
+import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import SharedLayout from './pages/SharedLayout';
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/cart' element={<Cart />} />
           <Route path='/products/:id' element={<SingleProduct />} />
         </Route>
       </Routes>

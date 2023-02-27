@@ -1,13 +1,23 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {TfiPlus,TfiMinus} from 'react-icons/tfi'
+import { useCartContext } from '../context/cart_context';
 
-const AddToCard = () => {
+const AddToCard = ({product}) => {
     const [amount,setAmount] = useState(1);
+    const{dispatch} = useCartContext()
 
     
     const submitHandler = (e) => {
         e.preventDefault()
+        dispatch({
+            type:'ADDTOCART',
+            payload:{
+                name:product.name,
+                price:product.price,
+                amount:amount
+            }
+        })
     }
 
   return (
@@ -33,6 +43,11 @@ const Input = styled.input`
     border: none;
     &:focus{
         outline:none
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
 `

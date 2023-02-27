@@ -12,7 +12,6 @@ const SingleProduct = () => {
   const navigate = useNavigate();
 
   const{singleProduct} = data.state
-  const price = singleProduct.price
 
   useEffect(() => {
     setTimeout(() => {
@@ -64,7 +63,7 @@ const SingleProduct = () => {
               <span style={{fontWeight:'bold'}}>Category:</span> <span>{singleProduct.category}</span>
             </div>
             <hr />
-            <AddToCard />
+            <AddToCard product={singleProduct} />
           </div>
         </div>
       </Wrapper>
