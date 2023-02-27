@@ -24,15 +24,15 @@ const ProductsMenu = () => {
           state.filteredProds.map((prod)=>{
             return (
                 <div key={prod.id} className='product-wrapper'>
-                    <Link to={prod.id}>
                          <div className="wrapper-item">
+                    <Link to={prod.id}>
                             <img src={prod.image} style={{borderRadius:'5px',boxShadow:'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px' }} width='100%' height='230px' alt="" />
+                    </Link>
                             <div className='item-infos'>
                                 <span>{prod.name.charAt(0).toUpperCase() + prod.name.slice(1)}</span>
                                 <span>$ {prod.price.toFixed(2)}</span>
                             </div>
                         </div>
-                    </Link>
                 </div> 
                     )
                 })}

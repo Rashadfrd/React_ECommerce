@@ -13,9 +13,11 @@ const PageHero = ({title,product}) => {
 const Wrapper = styled.div`
     height:130px;
     width:100%;
+    padding:0 14%;
     background-color:#f1f5f8;
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
+    font-size:28px
 `
 export default PageHero
