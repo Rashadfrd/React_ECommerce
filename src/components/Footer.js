@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Footer = () => {
+  const date = new Date;
+  const currentYear = date.getFullYear()
   return (
     <FooterElement>
-      Footer
+      {currentYear} <span style={{margin:'10px'}}>Farhadzada Rashad</span>
     </FooterElement>
   )
 }

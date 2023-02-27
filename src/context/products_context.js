@@ -13,7 +13,10 @@ const ProductsProvider = ({children}) => {
         categories:[],
         isLoading:false,
         isFailed:false,
-        filteredProds:[]
+        filteredProds:[],
+        singleProduct:{},
+        singleIsLoading:false,
+        singleIsFailed:false
     });
 
     const fetchProducts = async() => {
@@ -28,6 +31,31 @@ const ProductsProvider = ({children}) => {
             dispatch({type:'PRODUCTFETCH_ERROR'})
         }
     }
+    const fetchSingle = async(id) => {
+        dispatch({type:'SINGLEFETCH_BEGIN'})
+        try {
+            const response = await axios.get('https://react-ecommerce-63789-default-rtdb.firebaseio.com/products.json')
+            const prods = []
+            for( const key in response.data){
+                prods.push({
+                    id : key,
+                    name:response.data[key].name,
+                    category:response.data[key].category,
+                    desc:response.data[key].desc,
+                    price:response.data[key].price,
+                    image:response.data[key].image,
+                    company:response.data[key].company,
+                    featured:response.data[key].featured
+                })
+            }
+            dispatch({
+                type:'GET_SINGLE',
+                payload:prods.find(x=>x.id === id)
+            })
+        } catch (error) {
+            dispatch({type:'SINGLEFETCH_ERROR'})
+        }
+    }
 
     useEffect(() => {
         fetchProducts();
@@ -35,7 +63,8 @@ const ProductsProvider = ({children}) => {
 
     const data = {
         state,
-        dispatch
+        dispatch,
+        fetchSingle
     }
 
     return(

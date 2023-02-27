@@ -1,4 +1,3 @@
-
 const productsReducer = (state,action) => {
     if(action.type === 'SIDEBAR_ACTIVE'){
         return{
@@ -68,6 +67,28 @@ const productsReducer = (state,action) => {
         return{
             ...state,
             filteredProds : filteredProducts
+        }
+    }
+    if(action.type === 'SINGLEFETCH_BEGIN'){
+        return{
+            ...state,
+            singleIsLoading : true,
+        }
+    }
+    if(action.type === 'GET_SINGLE'){
+        return{
+            ...state,
+            singleIsLoading : false,
+            singleIsFailed : false,
+            singleProduct : action.payload
+            
+        }
+    }
+    if(action.type === 'SINGLEFETCH_ERROR'){
+        return{
+            ...state,
+            singleIsLoading : false,
+            singleIsFailed : true
         }
     }
 }

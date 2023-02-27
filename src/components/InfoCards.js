@@ -1,30 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
+import { homeInfos } from '../utils/constants'
 
 const InfoCards = () => {
   return (
     <Wrapper>
-        <div class="card">
-        <div class="card-img"></div>
-        <div class="card-info">
-            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
-            <p class="text-title">Autor</p>
-        </div>
-        </div>
-        <div class="card">
-        <div class="card-img"></div>
-        <div class="card-info">
-            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
-            <p class="text-title">Autor</p>
-        </div>
-        </div>
-        <div class="card">
-        <div class="card-img"></div>
-        <div class="card-info">
-            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
-            <p class="text-title">Autor</p>
-        </div>
-        </div>
+        {homeInfos.map((item)=>{
+            return(
+                <div key={item.id} className="card">
+                    <div className="card-img">{item.icon}</div>
+                    <div className="card-info">
+                        <p className="text-title">{item.name}</p> 
+                        <p className="text-body">{item.content}</p>
+                    </div>
+                </div>
+            )
+        })}
     </Wrapper>
   )
 }
@@ -34,7 +25,7 @@ const Wrapper = styled.section`
 display:flex;
 align-items:center;
 justify-content:space-around;
-padding:25px;
+padding:5%;
 
 /*Magic card*/
 .card {
@@ -52,7 +43,7 @@ padding:25px;
  display: flex;
  flex-direction: column;
  align-items: center;
- gap: 2em;
+ gap: 1em;
  padding: 0 1rem;
 }
 
@@ -66,19 +57,11 @@ padding:25px;
  background: linear-gradient(to bottom, #42caff 0%, #e81aff 100%);
  position: relative;
  transition: all .3s ease-in-out;
+ display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.card-img::before {
- content: "";
- border-radius: inherit;
- position: absolute;
- top: 50%;
- left: 50%;
- width: 90%;
- height: 90%;
- transform: translate(-50%, -50%);
- border: 1rem solid #e8e8e8;
-}
 
 /*Text*/
 .text-title {

@@ -69,7 +69,6 @@ const Wrapper = styled.section`
         padding:.5% 3%;
         border: 1px solid black;
         border-radius:5px;
-        text-decoration:none;
         color:black;
         transition: .3s;
     }
