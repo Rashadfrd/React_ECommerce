@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {FaUserPlus, FaUserMinus} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/cart_context'
+import { useAuth0 } from "@auth0/auth0-react";
 
 const CartButtons = () => {
+  const {  isAuthenticated,loginWithRedirect, logout } = useAuth0();
   const {state} = useCartContext()
   console.log()
   return (
@@ -15,7 +18,12 @@ const CartButtons = () => {
         </div>
       </Link>
         <div className="cart-item">
-          <span>Login</span>
+          {isAuthenticated 
+          ? 
+            <span onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout <FaUserMinus size={25} /></span> 
+          : 
+            <span onClick={() => loginWithRedirect()}>Login <FaUserPlus size={25} /></span>
+          }
         </div>
     </CartButtonsElement>
   )
