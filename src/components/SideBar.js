@@ -98,7 +98,7 @@ const SidebarElement = styled.div`
         width:100%
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 850px) {
         display:none
       }
 

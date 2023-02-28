@@ -2,10 +2,12 @@ import React from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import About from './pages/About';
 import Cart from './pages/Cart';
+import CheckOut from './pages/CheckOut';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import SharedLayout from './pages/SharedLayout';
 import SingleProduct from './pages/SingleProduct';
+import PrivateRoute from './pages/PrivateRoute';
 
 
 function App() {
@@ -15,8 +17,16 @@ function App() {
         <Route path='/' element={<SharedLayout />}> 
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/products' element={<Products />} />
           <Route path='/cart' element={<Cart />} />
+          <Route 
+            path='/checkout'
+            element={
+              <PrivateRoute>
+                <CheckOut />
+              </PrivateRoute>
+            } 
+            />
+          <Route path='/products' element={<Products />} />
           <Route path='/products/:id' element={<SingleProduct />} />
         </Route>
       </Routes>

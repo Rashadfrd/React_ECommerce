@@ -6,8 +6,10 @@ import CartButtons from './CartButtons'
 import { links } from '../utils/constants'
 import img from '../assets/logo.png'
 import { useProductsContext } from '../context/products_context'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Navbar = () => {
+    const{isAuthenticated} = useAuth0()
     const {dispatch} = useProductsContext();
 
     const sidebarHandler = () =>{
@@ -26,6 +28,9 @@ const Navbar = () => {
                 const{id,text,url} = link;
                 return <NavLink key={id} to={url} className='nav-item'>{text}</NavLink>
             })}
+            {
+                isAuthenticated && <NavLink to='/checkout' className='nav-item'>Checkout</NavLink>
+            }
         </nav>
         <div className="nav-cart">
             <CartButtons />
@@ -59,7 +64,7 @@ const Header = styled.header`
         cursor:pointer
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 850px) {
         nav{
             display:none
         }
