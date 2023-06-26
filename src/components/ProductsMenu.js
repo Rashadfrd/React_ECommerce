@@ -61,6 +61,11 @@ const Wrapper = styled.section`
     .product-wrapper{
         width:32%;
         padding:1%;
+        transition:.3s
+    }
+
+    .product-wrapper:hover{
+        transform:scale(1.03)
     }
     .wrapper-item{
         object-fit:contain;
