@@ -3,16 +3,53 @@ import { Link } from 'react-router-dom'
 import classes from './style.module.css'
 import { useProductsContext } from '../../context/products_context'
 import Spinner from '../Loader'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const FeaturedProducts = () => {
     const {state} = useProductsContext()
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };    
   return (
       <section className={classes.featuredSection}>
         <div className={classes.title}>
             <h2>Featured Products</h2>
             <hr/>
         </div>
-        <div className={classes.featuredProducts}>
+        <Slider {...settings} className={classes.featuredProducts}>
             {state.isLoading 
             ? <Spinner /> 
             : state.featuredProducts.map((prod)=>{
@@ -20,7 +57,7 @@ const FeaturedProducts = () => {
                     <div key={prod.id} className={classes.featuredProductsItem}>
                         <Link to={`/products/${prod.id}`}>
 
-                        <img src={prod.image} style={{borderRadius:'5px',boxShadow:'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px' }} width='100%' height='230px' alt="" />
+                        <img src={prod.image}className={classes.prodImg} alt="" />
                         </Link>
                         <div className={classes.itemInfos}>
                             <span>{prod.name.charAt(0).toUpperCase() + prod.name.slice(1)}</span>
@@ -30,7 +67,7 @@ const FeaturedProducts = () => {
                 )
             })
             }
-        </div>
+        </Slider>
         <div className={classes.btnLink}>
             <Link className={classes.prodLinkBtn} to={'/products'}>All Products</Link>    
         </div>            

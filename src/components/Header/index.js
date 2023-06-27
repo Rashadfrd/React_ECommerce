@@ -29,7 +29,7 @@ const Navbar = () => {
         <nav className={classes.nav}>
             {links.map((link)=>{
                 const{id,text,url} = link;
-                return <NavLink key={id} to={url} className={location.pathname.length > 1 ? classes.navItemSecond : classes.navItem}>{text}</NavLink>
+                return <NavLink key={id} to={url} className={location.pathname.length > 1 ? location.pathname === url ? `${classes.navItemSecond} ${classes.active}` : classes.navItemSecond : location.pathname === url ? `${classes.navItem} ${classes.active}` : classes.navItem}>{text}</NavLink>
             })}
             {
                 isAuthenticated && <NavLink to='/checkout' className={classes.navItem}>Checkout</NavLink>
