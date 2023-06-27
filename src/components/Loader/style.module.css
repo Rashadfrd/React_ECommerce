@@ -1,21 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const Spinner = () => {
-  return (
-    <SpinnerElement>
-        <div className='lds-dual-ring'></div>
-    </SpinnerElement>
-  )
-}
-
-const SpinnerElement = styled.div`
-.lds-dual-ring {
+.ldsDualRing {
     display: inline-block;
     width: 80px;
     height: 80px;
   }
-  .lds-dual-ring:after {
+  .ldsDualRing:after {
     content: " ";
     display: block;
     width: 64px;
@@ -33,6 +21,4 @@ const SpinnerElement = styled.div`
     100% {
       transform: rotate(360deg);
     }
-  }`
-
-export default Spinner
+  }

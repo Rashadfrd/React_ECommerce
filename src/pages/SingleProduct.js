@@ -4,7 +4,7 @@ import { useProductsContext } from '../context/products_context'
 import PageHero from '../components/PageHero'
 import styled from 'styled-components'
 import AddToCard from '../components/AddToCard'
-import Spinner from '../components/Spinner'
+import Spinner from '../components/Loader'
 
 const SingleProduct = () => {
   const data = useProductsContext()

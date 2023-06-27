@@ -1,0 +1,29 @@
+.navSideButtons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item{
+    margin:10px;
+    position:relative;
+    cursor:pointer;
+    color:white;
+}
+.itemSecond{
+    margin:10px;
+    position:relative;
+    cursor:pointer;
+    color:black;
+}
+.cartAmount{
+    z-index:2;
+    position:absolute;
+    top:-10px;
+    right:-8px;
+    background-color:red;
+    border-radius:50%;
+    padding: 0 4px;
+    font-size:15px;
+    color:white;
+}

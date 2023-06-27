@@ -1,0 +1,21 @@
+.aside{
+    height:100vh;
+    position:sticky;
+    top:90px;
+    margin-right:5%;
+    padding:0 2% 2% 2%;
+}
+
+.formItem{
+  display:flex;
+  flex-direction:column;
+}
+.categoryBtn{
+  border:none;
+  background:none;
+  text-align:start;
+  color:black
+}
+.categoryBtn:hover{
+  color:blue
+}

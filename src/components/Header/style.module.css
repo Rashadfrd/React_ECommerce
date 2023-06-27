@@ -1,0 +1,51 @@
+.header{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:0 10px;
+    z-index:10;
+}
+.headerAbsolute{
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    color:white;
+}
+.headerSticky{
+    position:sticky;
+    top:0;
+    color:black;
+    background-color: white;
+}
+
+.navItem{
+    text-decoration:none;
+    margin:10px;
+    color:white
+}
+.navItemSecond{
+    text-decoration:none;
+    margin:10px;
+    color:black
+}
+.active{
+    border-bottom:2px solid gray
+}
+.menuBtn{
+    display:none;
+    cursor:pointer
+}
+
+@media only screen and (max-width: 850px) {
+    .nav{
+        display:none;
+    }
+    .menuBtn{
+        display:block
+    }
+    .navCart{
+        display:none
+    }
+  }
