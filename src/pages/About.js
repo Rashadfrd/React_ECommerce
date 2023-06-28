@@ -9,7 +9,7 @@ const About = () => {
       <PageHero title={'About'} />
       <Wrapper>
         <div className="about-left">
-          <img src={img} style={{borderRadius:'4%'}} width="85%" height="420px" alt="" />
+          <img className='heroImg' src={img} style={{borderRadius:'4%'}} alt="" />
         </div>
         <div className="about-right">
           <h2>About Us</h2>
@@ -42,7 +42,29 @@ const Wrapper = styled.div`
     }
     p{
       text-align:justify;
-      width:80%;
+      width:100%;
+    }
+  }
+  .heroImg{
+    width:90%;
+    height:420px
+  }
+  @media only screen and (max-width: 1161px) {
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    .about-left{
+      width:100%;
+      justify-content:center;
+      margin:40px 0
+    }
+    .about-right{
+      width:100%
+    }
+  }
+  @media only screen and (max-width: 590px) {
+    .heroImg{
+      height:250px
     }
   }
 `

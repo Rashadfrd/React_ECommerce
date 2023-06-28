@@ -1,0 +1,14 @@
+.partners{
+    width: 100%;
+    overflow: hidden;
+}
+
+.partnerItem{
+    width: 150px;
+}
+
+.partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,7 @@
 import classes from './style.module.css'
 import React from 'react'
 import { NavLink,Link, useLocation } from 'react-router-dom'
-import {GrMenu} from 'react-icons/gr'
+import {AiOutlineMenu} from 'react-icons/ai'
 import NavSideButtons from '../NavSideButtons'
 import { links } from '../../utils/constants'
 import img from '../../assets/logo-2.png'
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className={classes.navCart}>
             <NavSideButtons />
         </div>
-        <div className={classes.menuBtn} onClick={sidebarHandler}><span><GrMenu size={'30px'} /></span></div>
+        <div className={classes.menuBtn} onClick={sidebarHandler}><span><AiOutlineMenu   size={'30px'} /></span></div>
     </header>
   )
 }
