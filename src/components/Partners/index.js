@@ -1,70 +1,67 @@
 import React from 'react'
 import Slider from "react-slick";
 import classes from './style.module.css'
+import { partners } from '../../utils/constants';
 
 function Partners() {
     var settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
+        infinite: true,
         slidesToShow: 5,
-        slidesToScroll: 5,
-        initialSlide: 0,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1100,
+            settings: {
+              slidesToShow: 4,
+              dots: false,
+              className: "center",
+              infinite: true,
+              centerPadding: "60px",
+              swipeToSlide: true,
+            }
+          },
+          {
+            breakpoint: 900,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
+              dots: false,
+              className: "center",
               infinite: true,
-              dots: true
+              centerPadding: "60px",
+              swipeToSlide: true,
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 735,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+              slidesToShow: 3,
+              dots: false,
+              className: "center",
+              infinite: true,
+              centerPadding: "60px",
+              swipeToSlide: true,
             }
           },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
         ]
       };
   return (
     <section className={classes.partners}>
-      <Slider {...settings}>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-          <div className={classes.partner}>
-            <img className={classes.partnerItem} src="https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp" alt="" />
-          </div>
-        </Slider>
+        <div className={classes.container}>
+            <Slider {...settings}>
+                {
+                    partners.map((item) => {
+                        return (
+                            <div key={item.id} className={classes.partner}>
+                                <img className={classes.partnerItem} src={item.src} alt="" />
+                            </div>
+                        )
+                    })
+                }
+            </Slider>
+        </div>
     </section>
   )
 }

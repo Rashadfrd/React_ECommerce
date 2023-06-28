@@ -1,14 +1,33 @@
 .partners{
     width: 100%;
     overflow: hidden;
+    padding: 40px 8%;
+}
+
+.container{
+    border: 1px solid rgb(188, 188, 188);
 }
 
 .partnerItem{
-    width: 150px;
+    width: 145px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .partner{
-    display: flex;
+    height: 100px;
+    display: flex !important;
     justify-content: center;
     align-items: center;
 }
+
+
+@media only screen and (max-width: 583px) {
+    .partner{
+        height: 80px;
+    }
+    .partnerItem{
+        width: 75px;
+        height: 20px;
+    }
+  }
