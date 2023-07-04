@@ -2,23 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    width: 75%;
     margin: 0 auto;
     /* background: red; */
 }
-
-
 .box{
-    padding: 80px 60px;
-    background: black;
+    padding: 80px 0px;
+    background: rgb(29, 29, 29);
+    color: #fff;
     width: 100%;
 }
-
+.pItem{
+    margin: 0;
+    padding: 0;
+}
 .column{
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 60px;
+    width: 200px;
+    margin: 3% 5%;
 }
 
 .footerlink{
@@ -28,11 +31,6 @@
     text-decoration: none;
      
 }
-.footerlink:hover {
-    color: green;
-    transition: 200ms ease-in;
-}
-
 .heading{
     font-size: 24px;
     padding: 0;
@@ -42,30 +40,29 @@
 }
 
 .row{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 
-                           minmax(185px, 1fr));
-    grid-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footerTop{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .footerTopTitle{
     color: #fff;
 }
 
+
 .formItem{
     background-color: rgb(49, 48, 48);
     border: none;
     padding: 11px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-right: 5px;
+    width: 340px;
     color: #fff;
 }
 
@@ -75,37 +72,90 @@
 .submitBtn{
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: rgb(69, 140, 246);
     color: #fff;
+    transition: .3s;
+
+    &:hover{
+        background-color: rgb(14, 98, 224);
+    }
 }
 
-@media (max-width: 1000px) {
-    .box{
-        padding: 70px 30px;
+.footerBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.socials{
+    display: flex;
+    gap: 16px;
+}
+.socialItem{
+    border: 1px solid #b4b3b3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.socialFb:hover{
+    background-color: rgb(2, 74, 194);
+    border-color: rgb(2, 75, 194);
+}
+.socialInsta:hover{
+    background: linear-gradient(#ff3131, #f5d018);
+    border-color: linear-gradient(#ff3131, #f5d018);
+}
+.socialTw:hover{
+    background-color: rgb(2, 117, 194);
+    border-color: rgb(2, 117, 194);
+}
+
+@media (max-width: 1245px) {
+    .formItem{
+        width: 230px;
     }
-    .row{
-        grid-template-columns: repeat(auto-fill, 
-        minmax(200px, 1fr));
-    }
+  }
+
+@media (max-width: 1100px) {
     .footerTop{
         flex-direction: column;
-        gap: 10px;
+        gap: 25px;
     }
     .formItem{
         width: 300px;
     }
+  }
+@media (max-width: 1100px) {
+    .row{
+        flex-wrap: wrap;
+    }
+    .footerBottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+  }
+
+@media (max-width: 526px) {
+    .formItem{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .newsLetterFormContainer{
+        width: 100%;
+    }
+    .newsLetterForm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .footerTopTitle{
-        text-align: center;
-    }
-  }
-@media (max-width: 570px) {
-    .formItem{
-        width: 250px;
-    }
-  }
-@media (max-width: 420px) {
-    .formItem{
-        width: 155px;
+        width: 100%;
     }
   }
