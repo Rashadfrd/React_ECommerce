@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom';
 import classes from './style.module.css'
 import {BsChevronUp}  from 'react-icons/bs'
 
@@ -28,9 +29,14 @@ function Sliderr() {
       });
     };
   return (
-    <div onClick={scrollToTop} className={`${classes.slider} ${isVisible ? null : classes.hide}`}>
+  <>
+    {ReactDOM.createPortal(
+      <div onClick={scrollToTop} className={`${classes.slider} ${isVisible ? null : classes.hide}`}>
       <BsChevronUp size={26} color='#fff' />
-    </div>
+    </div>,
+    document.getElementById('slideToTop')
+    )}
+    </>
   )
 }
 
