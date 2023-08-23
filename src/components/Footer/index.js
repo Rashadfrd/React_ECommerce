@@ -11,22 +11,6 @@ const Footer = () => {
   return (
     <div className={classes.box}>
       <div className={classes.container}>
-        <div className={classes.footerTop}>
-          <div>
-            <Link to={'/'}> <img src={logo} alt="" width={80} /></Link>
-          </div>
-          <div className={classes.footerTopTitle}>
-            <p className={classes.pItem}>Subscribe to our Newsletter</p>
-            <p className={classes.pItem}>Get all the latest information, Sales and Offers.</p>
-          </div>
-          <div className={classes.newsLetterFormContainer}>
-            <form className={classes.newsLetterForm}>
-              <input className={classes.formItem} type="email" placeholder='Email address here...' />
-              <button className={classes.submitBtn}>Subscribe</button>
-            </form>
-          </div>
-        </div>
-        <hr style={{color:'#fff'}}/>
         <div className={classes.row}>
           <div className={classes.column}>
             <p className={classes.heading}>About Us</p>
