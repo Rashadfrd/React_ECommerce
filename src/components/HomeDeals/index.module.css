@@ -62,3 +62,68 @@
         transform: scale(.990);
     }
 }
+.dealsTitle{
+    text-align: start !important;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .dealsImg{
+        height: 480px;
+    }
+    .dealsRight{
+        justify-content: end;
+    }
+  }
+@media only screen and (max-width: 1032px) {
+    .dealsImg{
+        height: 100%;
+    }
+    .dealsRight{
+        justify-content: end;
+    }
+    .dealsTimeDay,.dealsTimeHour,.dealsTimeMinute,.dealsTimeSecond{
+        padding: 6px 14px;
+    }
+    .dealsTimeNum{
+        font-size: 19px;
+    }
+  }
+@media only screen and (max-width: 916px) {
+    .dealsImg{
+        width: 100%;
+        height: 100%;
+    }
+    .dealsLeft,.dealsRight{
+        width: 80%;
+    }
+    .dealsOfTheMonth{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 30px;
+        gap: 30px;
+    }
+    .dealsBtn{
+        font-size: 14px;
+        width: 140px;
+    }
+  }
+@media only screen and (max-width: 506px) {
+    .dealsTime{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .dealsTimeDay,.dealsTimeHour,.dealsTimeMinute,.dealsTimeSecond{
+        width: 40%;
+    }
+    .dealsTitle{
+        font-size: 30px;
+    }
+    .dealsInfo{
+        font-size: 15px;
+    }
+    .dealsBtnWrapper{
+        padding:0;
+    }
+  }
