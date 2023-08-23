@@ -1,6 +1,6 @@
 .dealsOfTheMonth{
     display: flex;
-    padding: 100px 110px;
+    padding: 5% 5%;
 }
 .dealsRight,.dealsLeft{
     width: 50%;
@@ -13,7 +13,7 @@
 }
 .dealsRight{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 .dealsImg{
@@ -95,13 +95,12 @@
         height: 100%;
     }
     .dealsLeft,.dealsRight{
-        width: 80%;
+        width: 100%;
     }
     .dealsOfTheMonth{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding: 60px 30px;
         gap: 30px;
     }
     .dealsBtn{
@@ -124,6 +123,6 @@
         font-size: 15px;
     }
     .dealsBtnWrapper{
-        padding:0;
+            padding:0;
     }
   }
