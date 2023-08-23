@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import classes from "./style.module.css";
 import { useProductsContext } from "../../context/products_context";
@@ -9,6 +9,16 @@ import "slick-carousel/slick/slick-theme.css";
 
 const FeaturedProducts = () => {
   const { state } = useProductsContext();
+  const slider = useRef()
+
+  const nextOne = () => {
+    slider.current.slickNext()
+  };
+
+  const previousOne = () => {
+    slider.current.slickPrev()
+  }
+
   var settings = {
     dots: false,
     infinite: true,
@@ -48,7 +58,7 @@ const FeaturedProducts = () => {
       <div className={classes.titleAndButtons}>
         <h2 className={classes.title}>Featured Products</h2>
         <div className={classes.sliderButtons}>
-          <button className={classes.sliderLeft}>
+          <button onClick={previousOne} className={classes.sliderLeft}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -64,7 +74,7 @@ const FeaturedProducts = () => {
               />
             </svg>
           </button>
-          <button className={classes.sliderRight}>
+          <button onClick={nextOne} className={classes.sliderRight}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -87,7 +97,7 @@ const FeaturedProducts = () => {
           <Spinner />
         </div>
       )}
-      <Slider {...settings} className={classes.featuredProducts}>
+      <Slider ref={slider} {...settings} className={classes.featuredProducts}>
         {state &&
           state.featuredProducts.map((prod) => {
             return (

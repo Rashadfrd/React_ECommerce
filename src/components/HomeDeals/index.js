@@ -18,16 +18,16 @@ function Deals() {
         </div>
         <div className={classes.dealsTime}>
           <div className={classes.dealsTimeDay}>
-          <CountUp className={classes.dealsTimeNum} end={120} duration={2} /> <span>Days</span>
+          <CountUp className={classes.dealsTimeNum} end={120} duration={6} /> <span>Days</span>
           </div>
           <div className={classes.dealsTimeHour}>
-            <CountUp className={classes.dealsTimeNum} end={18} duration={2} /> <span>Hours</span>
+            <CountUp className={classes.dealsTimeNum} end={18} duration={6} /> <span>Hours</span>
           </div>
           <div className={classes.dealsTimeMinute}>
-            <CountUp className={classes.dealsTimeNum} end={15} duration={2} /> <span>Mins</span>
+            <CountUp className={classes.dealsTimeNum} end={15} duration={6} /> <span>Mins</span>
           </div>
           <div className={classes.dealsTimeSecond}>
-            <CountUp className={classes.dealsTimeNum} end={10} duration={2} /> <span>Secs</span>
+            <CountUp className={classes.dealsTimeNum} end={10} duration={6} /> <span>Secs</span>
           </div>
         </div>
         <div className={classes.dealsBtnWrapper}></div>
