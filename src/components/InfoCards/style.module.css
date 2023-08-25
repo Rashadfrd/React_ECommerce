@@ -3,6 +3,7 @@ p{
     padding: 0;
 }
 .infoCard{
+    font-family: 'Space Grotesk', sans-serif;
     padding: 5% 5%;
     display: flex;
     justify-content: space-between;

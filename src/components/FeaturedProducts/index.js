@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import classes from "./style.module.css";
 import { useProductsContext } from "../../context/products_context";
-import Spinner from "../Loader";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Skeleton from "../Skeleton";
 
 const FeaturedProducts = () => {
   const { state } = useProductsContext();
@@ -93,9 +93,21 @@ const FeaturedProducts = () => {
         </div>
       </div>
       {state.isLoading && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Spinner />
-        </div>
+      <Slider ref={slider} {...settings} className={classes.featuredProducts}>
+        {Array(4).fill(null).map((index) => {
+          return (
+            <div key={index} className={classes.featuredProductsItem}>
+              <div
+                className={classes.prodImgWrapper}
+              >
+                <div className={classes.prodImg}>
+                  <Skeleton/>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+    </Slider>
       )}
       <Slider ref={slider} {...settings} className={classes.featuredProducts}>
         {state &&

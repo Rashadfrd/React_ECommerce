@@ -43,6 +43,7 @@
 .dealsInfo{
     margin: 0;
     padding: 0;
+    text-align: start !important;
 }
 
 .dealsBtnWrapper{
@@ -103,10 +104,6 @@
         align-items: center;
         gap: 30px;
     }
-    .dealsBtn{
-        font-size: 14px;
-        width: 140px;
-    }
   }
 @media only screen and (max-width: 506px) {
     .dealsTime{
@@ -123,6 +120,13 @@
         font-size: 15px;
     }
     .dealsBtnWrapper{
-            padding:0;
+        padding:0;
+    }
+    .dealsBtn{
+        font-size: 14px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   }
