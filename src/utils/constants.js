@@ -1,6 +1,6 @@
 import React from "react";
 import {AiOutlineShoppingCart, AiOutlineLock, AiOutlinePhone} from 'react-icons/ai'
-import {CiMoneyBill} from 'react-icons/ci'
+import {BsCurrencyDollar} from 'react-icons/bs'
 
 export const links = [
   {
@@ -29,14 +29,14 @@ export const homeInfos = [
   },
   {
     id: 2,
-    icon: <AiOutlinePhone size={38} />,
+    icon: <BsCurrencyDollar size={38} />,
     name: "Money Back",
     content:
       "30 day guarantee",
   },
   {
     id: 3,
-    icon: <CiMoneyBill size={38} />,
+    icon: <AiOutlinePhone size={38} />,
     name: "Premium Support",
     content:
       "Phone and email support",
@@ -53,46 +53,26 @@ export const homeInfos = [
 export const partners = [
   {
     id: 1,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Acer_png.webp",
+    src: "https://freepngimg.com/thumb/nike_logo/4-2-nike-logo-png-clipart-thumb.png",
   },
   {
     id: 2,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Beurer_png.webp",
+    src: "https://loodibee.com/wp-content/uploads/Adidas-Logo.png",
   },
   {
     id: 3,
-    src: "https://kontakt.az/wp-content/uploads/2020/04/3_png.webp",
+    src: "https://static.vecteezy.com/system/resources/previews/022/101/105/non_2x/supreme-logo-transparent-free-png.png",
   },
   {
     id: 4,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/TOYOTA_png.webp",
+    src: "https://static.vecteezy.com/system/resources/previews/022/100/980/original/puma-logo-transparent-free-png.png",
   },
   {
     id: 5,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Panasonic_png.webp",
+    src: "https://i.pinimg.com/originals/8b/36/6a/8b366a2379f6d73aee1f1f28d5d71a9d.png",
   },
   {
     id: 6,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Kenwood_png.webp",
-  },
-  {
-    id: 7,
-    src: "https://kontakt.az/wp-content/uploads/2020/04/4_png.webp",
-  },
-  {
-    id: 8,
-    src: "https://kontakt.az/wp-content/uploads/2022/09/1280px-PlayStation_logo_and_wordmark.svg-1_png.webp",
-  },
-  {
-    id: 9,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Samsung_png.webp",
-  },
-  {
-    id: 10,
-    src: "https://kontakt.az/wp-content/uploads/2020/03/Bosh_png.webp",
-  },
-  {
-    id: 11,
-    src: "https://kontakt.az/wp-content/uploads/2021/11/%D0%91%D0%B5%D0%B7-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1_png.webp",
-  },
+    src: "https://static.vecteezy.com/system/resources/previews/022/100/678/original/jordan-logo-transparent-free-png.png",
+  }
 ];

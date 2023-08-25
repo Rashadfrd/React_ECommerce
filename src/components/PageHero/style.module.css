@@ -1,10 +1,37 @@
+.pageHeroSection{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pageHero{
-    height:130px;
-    width:100%;
+    background-image: url('https://s3-alpha-sig.figma.com/img/0abd/095c/294acd8a59edb9d0a61acf0b2a05d53e?Expires=1693785600&Signature=TECTWf3vNMgEn645enhC4z-sQcm6yoKyrxdYgBsZpjlQg6z~8dH17cdz6B-e0KTbuEuq8N8UL4VWz74TfztwzsLC2pAcDVn5bU36rf~qK-kEIKkEe4PBfimZAqb6weIq-tp~fIQDGYUNDnn8LcAlIpGK~B7GxZG6swTUXwccvhnHPOAI50Ek5WX-dWojad1E-POjHS~vSDimaU82ITZZFtw8PJUZyHYErE0ZYtM2FFvxtcq6PhSIG5F~-2Zfiv0ryNfl-gNamTHW5MRLTjDy9hIdHzBuU267k4BRCjJAyTFFyc24YqliG8ZYZ22fFAU5nlRM8J3jgA-ENShx6iC8Yg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -130px;
+    height: 100%;
+    width:90%;
     padding:0 14%;
-    background-color:#f1f5f8;
     display:flex;
-    justify-content:flex-start;
+    flex-direction: column;
+    justify-content:center;
     align-items:center;
     font-size:28px
+}
+
+p{
+    text-align: center !important;
+}
+
+.location{
+    font-size: 13px;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+.desc{
+    font-size: 17px;
 }

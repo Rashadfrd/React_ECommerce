@@ -37,7 +37,7 @@ function Partners() {
           {
             breakpoint: 735,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
               dots: false,
               className: "center",
               infinite: true,

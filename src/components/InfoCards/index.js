@@ -7,7 +7,7 @@ const InfoCards = () => {
     <section className={classes.infoCard}>
       {homeInfos.map((item, index) => {
         return (
-        <>
+        <React.Fragment key={item.id}>
           <div className={classes.card}>
             <div className={classes.cardLeft}>
               {item.icon}
@@ -21,7 +21,7 @@ const InfoCards = () => {
             index !== homeInfos.length-1 &&
             <div className={classes.line}></div>
           }
-        </>
+        </ React.Fragment>
         );
       })}
     </section>
