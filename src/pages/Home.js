@@ -5,6 +5,7 @@ import InfoCards from '../components/InfoCards'
 import Partners from '../components/Partners'
 import Deals from '../components/HomeDeals'
 import NewsLetter from '../components/NewsLetter'
+import HomeProducts from '../components/HomeProducts'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <HomeHero />
       <FeaturedProducts />
       <Deals />
+      <HomeProducts />
       <NewsLetter />
       <InfoCards />
       <Partners />
