@@ -1,0 +1,36 @@
+.FAQ{
+    padding: 5% 23%;
+}
+
+.accordionItem{
+    border: none;
+    border-bottom: 1px solid rgb(183, 183, 183);
+}
+
+.accordionHeading{
+    padding: 15px 0;
+    font-weight: 500;
+}
+
+.accordionPanel{
+    padding:0 0 15px 0;
+    font-size: 14px;
+}
+.accordionPanel > p{
+    text-align: start !important;
+}
+
+.accordionButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 570px) {
+    .FAQ{
+        padding: 5% 5%
+    }
+    .accordionHeading{
+        font-size: 15px;
+    }
+  }

@@ -16,6 +16,11 @@ export const links = [
     text: "Products",
     url: "/products",
   },
+  {
+    id: 4,
+    text: "Contact",
+    url: "/contact",
+  },
 ];
 
 export const homeInfos = [
