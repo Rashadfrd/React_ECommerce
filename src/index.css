@@ -9,7 +9,7 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
 }
 h1,h2,h3,h4{
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif; 
 }
 
 code {

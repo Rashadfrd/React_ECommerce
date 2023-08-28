@@ -1,0 +1,96 @@
+.companyServices{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.serviceItem,.serviceItemOdd,.serviceItemEven{
+    display: flex;
+    gap: 5%;
+}
+
+.serviceItemEven{
+    flex-direction: row-reverse;
+}
+
+.serviceItemLeft,.serviceItemEvenLeft,.serviceItemOddLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.serviceItemLeft{
+    width: 25%;
+}
+.serviceItemEvenLeft,.serviceItemOddLeft{
+    width: 47.5%;
+}
+.serviceItemDesc{
+    text-align: start !important;
+}
+.serviceItemRight,.serviceItemEvenRight,.serviceItemOddRight{
+    display: flex;
+    gap: 20px;
+}
+.serviceItemRight{
+    width: 70%;
+}
+.serviceItemEvenRight,.serviceItemOddRight{
+    width: 47.5%;
+}
+.serviceItemCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.05);
+    padding: 2%;
+}
+
+.serviceItemCardYear{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.serviceItemCardTitle{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.serviceItemCardDesc{
+    font-size: 14px;
+}
+
+.serviceItemImg{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+    .serviceItem,.serviceItemOdd,.serviceItemEven{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .serviceItemLeft,.serviceItemEvenLeft,.serviceItemOddLeft,.serviceItemRight,.serviceItemEvenRight,.serviceItemOddRight{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .serviceItemDesc{
+        text-align: justify !important;
+    }
+    .serviceItemSubTitle{
+        text-align: center !important;
+    }
+  }
+@media only screen and (max-width: 690px) {
+    .serviceItemRight{
+        flex-direction: column;
+    }
+    .serviceItemCard{
+        width: 100%;
+        height: 200px;
+    }
+  }
