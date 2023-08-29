@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import classes from "./style.module.css";
 import "react-tabs/style/react-tabs.css";
+import { Link } from "react-router-dom";
 
 function HomeProducts() {
   var settings = {
@@ -66,9 +67,9 @@ function HomeProducts() {
         <TabPanel className={classes.customTabPanel}>
           <Slider {...settings}>
             <div className={classes.productItem}>
-              <div className={classes.prodImg}>
+              <Link to='products/p-1' className={classes.prodImg}>
                 <img className={classes.prodImgItem} src="https://s3-alpha-sig.figma.com/img/29b1/a024/43c8a5fa3d4df8ba44931c087a5e828d?Expires=1693785600&Signature=L3y4gYuaNkEfOqWUWGRfM~JM1x6uq22t7SImGozMmhDdol0FoTle2GlGNQVI0XMjqJsW-eUhV8jniLV2ZjyrnhPkhHG5Iis9Vt54QOXvGiw8Nm3q~0ySsfmm8-V1Kafhze1mEs4RyDnfaIV68YeZHjc0oBkf6D2FKw3ETD3O-yN6aH3F0bjrjoK-zYB5gDtylaFuzOaCgbzcpj6r3fbQMGBwqH9CacJMFTP9jaTMM~YW3mQw2~TGVa0r3mbcFW-PMdZeH3L~2WRFxXDLeW0mQmZutc~GNIJFUCwHQJKCNoQxvWEkNSwHompcWVd4t0n0ITNNMC4K5Enu~Q~XWEVm1Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
-              </div>
+              </Link>
               <div className={classes.prodName}>
                 Jordan Max Aura
               </div>

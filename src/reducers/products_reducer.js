@@ -57,12 +57,12 @@ const productsReducer = (state,action) => {
         }
     }
     if(action.type === 'CATEGORY_FILTER'){
-        let filteredProducts
+        let filteredProducts = []
         if (action.payload === 'All') {
              filteredProducts = state.products
         }
         else{
-            filteredProducts = state.products.filter(x=>x.category === action.payload.charAt(0).toLowerCase() + action.payload.slice(1))
+            filteredProducts = state.products.filter(x=>x.category === action.payload)
         }
         return{
             ...state,
