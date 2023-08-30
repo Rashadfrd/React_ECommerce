@@ -1,5 +1,11 @@
 .menu{
-    width:70%;
+    width:80%;
+    position:sticky;
+    top:0;
+}
+.menuWide{
+    transition: .5s;
+    width:100%;
     position:sticky;
     top:0;
 }
@@ -7,51 +13,25 @@
 .menuHeader{
     display:flex;
     align-items:center;
-    justify-content:space-between
+    justify-content:space-between;
+    height: 30px;
+    margin: 0 10px 10px 10px;
 }
 .products{
     display:flex;
     align-items:center;
-    justify-content:space-between;
     flex-wrap:wrap;
-    padding: 5% 0
-}
-.productWrapper{
-    width:32%;
-    padding:1%;
-    transition:.3s
+    padding:0 0 5% 0
 }
 
-.productWrapper:hover{
-    transform:scale(1.03)
-}
-.wrapperItem{
-    object-fit:contain;
-}
-.itemInfos{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:18px;
-    letter-spacing:3px
+.productItemContainer{
+  padding: 0 10px;
+  width: 25%;
 }
 .productItem{
     display: flex !important;
     align-items: center;
     flex-direction: column;
-    margin:0 0 30px 0;
-  }
-  .prodImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .prodImgItem,.prodPrice,.prodName{
-    width: 230px;
-  }
-  .prodImgItem{
-    height: 300px;
   }
 
   .prodPrice{
@@ -60,6 +40,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px; /* 157.143% */
+    width: 100%;
   }
 
   .oldPrice{
@@ -76,86 +57,74 @@
     line-height: 28px; /* 175% */
     letter-spacing: -0.4px;
     margin: 10px 0 0 0;
+    width: 100%;
   }
 
-@media only screen and (max-width: 1336px) {
+  .prodImg{
+    width: 100%;
+    height: 100%;
+  }
+
+  .prodImgItem{
+    height: 340px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1198px) {
     .prodImgItem{
-        width: 210px;
-        height: 290px;
-    }
-    .prodPrice,.prodName{
-        width: 210px;
+      height: 290px;
     }
   }
-  @media only screen and (max-width: 1315px) {
+  @media only screen and (max-width: 1080px) {
     .prodImgItem{
-        width: 260px;
-        height: 320px;
-    }
-    .prodPrice,.prodName{
-        width: 260px;
+      height: 260px;
     }
   }
-  @media only screen and (max-width: 1133px) {
-    .prodImgItem{
-        width: 210px;
-        height: 290px;
+  @media only screen and (max-width: 980px) {
+    .productItemContainer{
+        width: 33%
     }
-    .prodPrice,.prodName{
-        width: 210px;
+    .prodImgItem{
+      height:300px
     }
   }
-  @media only screen and (max-width: 930px) {
-    .prodImgItem{
-        width: 180px;
-        height: 260px;
+  @media only screen and (max-width: 850px) {
+    .productItemContainer{
+        width: 33%
     }
-    .prodPrice,.prodName{
-        width: 180px;
+    .prodImgItem{
+      height:245px
     }
   }
-  @media only screen and (max-width: 785px) {
-    .prodImgItem{
-        width: 150px;
-        height: 210px;
+  @media only screen and (max-width: 737px) {
+    .productItemContainer{
+        width: 50%
     }
-    .prodPrice,.prodName{
-        width: 150px;
+    .prodImgItem{
+      height:370px
     }
   }
-  @media only screen and (max-width: 785px) {
-    .prodImgItem{
-        width: 150px;
-        height: 210px;
+  @media only screen and (max-width: 600px) {
+    .productItemContainer{
+        width: 50%
     }
-    .prodPrice,.prodName{
-        width: 150px;
+    .prodImgItem{
+      height:320px
     }
   }
-  @media only screen and (max-width: 645px) {
-    .prodImgItem{
-        width: 190px;
-        height: 230px;
+  @media only screen and (max-width: 520px) {
+    .productItemContainer{
+        width: 50%
     }
-    .prodPrice,.prodName{
-        width: 190px;
+    .prodImgItem{
+      height:270px
     }
   }
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 430px) {
+    .productItemContainer{
+        width: 50%
+    }
     .prodImgItem{
-        width: 160px;
-        height: 200px;
-    }
-    .prodPrice,.prodName{
-        width: 160px;
-    }
-  }
-  @media only screen and (max-width: 463px) {
-    .prodImgItem{
-        width: 130px;
-        height: 170px;
-    }
-    .prodPrice,.prodName{
-        width: 130px;
+      height:210px
     }
   }

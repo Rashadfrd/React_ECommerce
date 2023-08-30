@@ -6,10 +6,9 @@ import { useProductsContext } from '../../context/products_context'
 const ProductsMenu = () => {
     const {state} = useProductsContext()
   return (
-    <section className={classes.menu}>
+    <section className={state.isProdSidebarOpen ? classes.menu : classes.menuWide}>
       <div className={classes.menuHeader}>
         <div className={classes.productsCount}> {state.filteredProds.length} Products Found</div>
-        <hr style={{width:'65%'}} />
         <div>
             <form>
                 <label>Sort By</label>        
@@ -23,18 +22,20 @@ const ProductsMenu = () => {
          :
           state.filteredProds.map((prod)=>{
             return (
-              <div key={prod.id} className={classes.productItem}>
-              <div className={classes.prodImg}>
-                <img className={classes.prodImgItem} src={prod.image} alt="" />
+              <div className={classes.productItemContainer} key={prod.id} >
+                <div className={classes.productItem}>
+                <div className={classes.prodImg}>
+                  <img className={classes.prodImgItem} src={prod.image} alt="" />
+                </div>
+                <div className={classes.prodName}>
+                {prod.name.charAt(0).toUpperCase() + prod.name.slice(1)}
+                </div>
+                <div className={classes.prodPrice}>
+                  <span className={classes.newPrice}>$ {prod.price.toFixed(2)}</span>
+                  <span className={classes.oldPrice}>$ {prod.price.toFixed(2)}</span>
+                </div>
               </div>
-              <div className={classes.prodName}>
-              {prod.name.charAt(0).toUpperCase() + prod.name.slice(1)}
               </div>
-              <div className={classes.prodPrice}>
-                <span className={classes.newPrice}>$ {prod.price.toFixed(2)}</span>
-                <span className={classes.oldPrice}>$ {prod.price.toFixed(2)}</span>
-              </div>
-            </div>
                 // <div key={prod.id} className={classes.productWrapper}>
                 //          <div className={classes.wrapperItem}>
                 //     <Link to={prod.id}>

@@ -16,7 +16,8 @@ const ProductsProvider = ({children}) => {
         filteredProds:[],
         singleProduct:{},
         singleIsLoading:false,
-        singleIsFailed:false
+        singleIsFailed:false,
+        isProdSidebarOpen:true
     });
 
     const fetchProducts = async() => {

@@ -11,6 +11,18 @@ const productsReducer = (state,action) => {
             isSidebarOpen : action.val
         }
     }
+    if(action.type === 'PRODSIDEBAR_ACTIVE'){
+        return{
+            ...state,
+            isProdSidebarOpen : action.val 
+        }
+    }
+    if(action.type === 'PRODSIDEBAR_CLOSE'){
+        return{
+            ...state,
+            isProdSidebarOpen : action.val
+        }
+    }
     if(action.type === 'PRODUCTFETCH_BEGIN'){
         return{
             ...state,

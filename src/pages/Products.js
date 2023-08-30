@@ -18,8 +18,8 @@ const Products = () => {
 
 const Wrapper = styled.section`
   display:flex;
-  justify-content:center;
-  padding: 5% 0;
+  justify-content:space-between;
+  padding: 5%;
 
 `
 
