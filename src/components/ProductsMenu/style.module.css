@@ -1,7 +1,5 @@
 .menu{
     width:80%;
-    position:sticky;
-    top:0;
 }
 .menuWide{
     transition: .5s;
@@ -25,13 +23,20 @@
 }
 
 .productItemContainer{
-  padding: 0 10px;
+  padding: 0 10px 20px 10px;
   width: 25%;
 }
 .productItem{
     display: flex !important;
     align-items: center;
     flex-direction: column;
+
+    &:hover .prodActionVertical{
+      opacity: 1;
+    }
+    &:hover .prodLink{
+      opacity: 1;
+    }
   }
 
   .prodPrice{
@@ -41,6 +46,7 @@
     font-weight: 400;
     line-height: 22px; /* 157.143% */
     width: 100%;
+    margin-top: 5px;
   }
 
   .oldPrice{
@@ -62,21 +68,63 @@
 
   .prodImg{
     width: 100%;
-    height: 100%;
-  }
-
-  .prodImgItem{
     height: 340px;
+    position: relative  
+  }
+  
+  .prodImgItem{
+    height: 100%;
     width: 100%;
   }
 
+  .prodActionVertical{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    transition: .3s;
+    opacity: 0;
+  }
+
+  .addToBasket,.quickView{
+    border: 1px solid #d5d5d5;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  .prodLink{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s;
+  }
+  .prodLinkBtn{
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+  }
+
   @media only screen and (max-width: 1198px) {
-    .prodImgItem{
+    .prodImg{
       height: 290px;
     }
   }
   @media only screen and (max-width: 1080px) {
-    .prodImgItem{
+    .prodImg{
       height: 260px;
     }
   }
@@ -84,7 +132,7 @@
     .productItemContainer{
         width: 33%
     }
-    .prodImgItem{
+    .prodImg{
       height:300px
     }
   }
@@ -92,7 +140,7 @@
     .productItemContainer{
         width: 33%
     }
-    .prodImgItem{
+    .prodImg{
       height:245px
     }
   }
@@ -100,7 +148,7 @@
     .productItemContainer{
         width: 50%
     }
-    .prodImgItem{
+    .prodImg{
       height:370px
     }
   }
@@ -108,7 +156,7 @@
     .productItemContainer{
         width: 50%
     }
-    .prodImgItem{
+    .prodImg{
       height:320px
     }
   }
@@ -116,7 +164,7 @@
     .productItemContainer{
         width: 50%
     }
-    .prodImgItem{
+    .prodImg{
       height:270px
     }
   }
@@ -124,7 +172,7 @@
     .productItemContainer{
         width: 50%
     }
-    .prodImgItem{
+    .prodImg{
       height:210px
     }
   }
