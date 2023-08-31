@@ -1,90 +1,153 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-    margin: 0 auto;
-    /* background: red; */
-}
-.box{
-    padding: 80px 0px;
-    background: rgb(29, 29, 29);
-    color: #fff;
+  .footer{
     width: 100%;
-}
-.pItem{
+    background: #fafafb;
+    padding-top: 60px;
+  }
+  
+  footer.top > img {
+    height: 50px;
+    margin: 0 auto 50px;
+  }
+  
+  footer {
+    position: relative;
+    margin: 0 30px;
+    color: black;
+  }
+  
+  .top {
+    display: grid;
+    border-bottom: 2px solid rgba(87, 85, 85, 0.2);
+    padding-bottom: 20px;
+  }
+  
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 8px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .linksColumn {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  footer h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+  }
+  
+  footer p {
     margin: 0;
-    padding: 0;
-}
-.column{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 200px;
-    margin: 3% 5%;
-}
-
-.footerlink{
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 18px;
-    text-decoration: none;
-     
-}
-.heading{
-    font-size: 24px;
-    padding: 0;
-    color: #fff;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-.row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerBottom{
+  }
+  
+  .legal > a {
+    margin: 0 0 0 4px;
+  }
+  
+  .legal,
+  .copyright {
+    font-size: 14px;
+  }
+  
+  .legal > span {
+    margin-right: 10px;
+  }
+  
+  .socials {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    translate: -50% 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.socials{
-    display: flex;
-    gap: 16px;
-}
-.socialItem{
-    border: 1px solid #b4b3b3;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-}
-.socialFb:hover{
-    background-color: rgb(2, 74, 194);
-    border-color: rgb(2, 75, 194);
-}
-.socialInsta:hover{
-    background: linear-gradient(#ff3131, #f5d018);
-    border-color: linear-gradient(#ff3131, #f5d018);
-}
-.socialTw:hover{
-    background-color: rgb(2, 117, 194);
-    border-color: rgb(2, 117, 194);
-}
+    gap: 18px;
+    height: 56px;
+  }
+  
+  .socialsColumn :is(h2, p) {
+    display: none;
+  }
 
-@media (max-width: 1100px) {
-    .row{
-        flex-wrap: wrap;
+    .socialFb:hover{
+        transition: .3s;
+        color: rgb(2, 74, 194);
     }
-    .footerBottom{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+    .socialInsta:hover{
+        transition: .3s;
+        color: rgb(232, 10, 10)
+    }
+    .socialTw:hover{
+        transition: .3s;
+        color: rgb(2, 117, 194);
+    }
+  
+  @media (width > 400px) {
+    .linksColumn {
+      text-align: left;
+    }
+  
+    footer.top .links {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 50px;
+    }
+  
+    footer.bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 20px;
+      text-align: left;
+    }
+  
+    footer.top .socials {
+      left: 0;
+      translate: 0;
+    }
+  
+    footer.top > img {
+      margin: 0 0 50px;
+    }
+  }
+  
+  @media (width >= 640px) {
+    footer {
+      margin: 0 auto;
+      width: 90%;
+      padding: 0;
+    }
+  
+    footer.top .links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    footer.top .socials {
+      position: static;
+    }
+  
+    footer.bottom {
+      justify-content: flex-start;
+    }
+  
+    .socialsColumn :is(h2, p) {
+      display: block;
+      text-align: start !important;
     }
   }

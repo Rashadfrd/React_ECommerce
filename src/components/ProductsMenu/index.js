@@ -54,7 +54,7 @@ const ProductsMenu = () => {
                 <div className={classes.productItem}>
                   <Link to={prod.id} className={classes.prodImg}>
                   <div className={classes.prodActionVertical}>
-                    <button className={classes.addToBasket}>
+                    <button onClick={()=>{console.log('clicked')}} className={classes.addToBasket}>
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
