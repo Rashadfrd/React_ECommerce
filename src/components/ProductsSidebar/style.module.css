@@ -1,5 +1,12 @@
+.prodSidebarWrapper{
+  width: 280px;
+  transition: .5s ease-in-out;
+}
+.overlay{
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
 .prodSidebar{
-  width: 20%;
   height:90vh;
   position:sticky;
   top:90px;
@@ -28,6 +35,7 @@
   border-radius: 5px;
   padding: 0 15px;
   transition: .3s;
+  display: none;
 
   &:hover{
     background-color: black;
@@ -62,10 +70,10 @@
 }
 
 .clicked{
-  transition: .5s ease-in-out;
   transform: translate(-500%);
   opacity: 0;
   width: 0;
+  transition: .5s ease-in-out;
 }
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
@@ -88,4 +96,35 @@
     background-color: #bababa;
     border-radius: 10px;
     border: 0px solid #ffffff;
+  }
+
+  @media only screen and (max-width: 736px) {
+    .prodSidebarWrapper{
+      width: 100vw;
+      display: flex;
+      position: fixed;
+      z-index: 9999999;
+      top: 0;
+      bottom: 0;
+    }
+    .prodSidebar{
+      background-color: white;
+      width: 40%;
+      top: 0;
+      height: 100vh;
+      padding: 5% 5% 0 0;
+    }
+    .prodSidebarFilter{
+      display: block;
+    }
+    .overlay{
+      display: block;
+      width: 60%;
+    }
+    .clicked{
+      position: fixed;
+      z-index: -2;
+      top: 0;
+      bottom: 0;
+    }
   }

@@ -13,7 +13,7 @@
 }
 .sidebarActive{
     transform:translate(0%);
-    z-index:999;
+    z-index:999999;
 }
 .container{
     width:90%;
