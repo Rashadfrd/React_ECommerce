@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple eCommerce website built using React, React Router, Auth0 for authentication, and Firebase for handling product data.
+This is a simple eCommerce website built using React, React Router, React Leaflet, Auth0 for authentication, and Firebase for handling product data.
 
 ## Features
 
@@ -15,5 +15,6 @@ This is a simple eCommerce website built using React, React Router, Auth0 for au
 
 - React
 - React Router
+- React Leaflet
 - Auth0
 - Firebase
