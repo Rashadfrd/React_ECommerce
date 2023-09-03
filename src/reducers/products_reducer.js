@@ -81,6 +81,15 @@ const productsReducer = (state,action) => {
             filteredProds : filteredProducts
         }
     }
+    if(action.type === 'PRICE_FILTER'){
+        let filteredProducts = []
+        filteredProducts = state.products.filter(x=>x.price >= action.payload.minPrice && x.price <= action.payload.maxPrice )
+
+        return{
+            ...state,
+            filteredProds : filteredProducts
+        }
+    }
     if(action.type === 'SINGLEFETCH_BEGIN'){
         return{
             ...state,

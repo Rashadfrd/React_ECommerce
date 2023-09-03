@@ -152,3 +152,18 @@ export const partners = [
     src: "https://static.vecteezy.com/system/resources/previews/022/100/678/original/jordan-logo-transparent-free-png.png",
   },
 ];
+
+
+export const sliderStyles = {
+  trackStyle: {
+    backgroundColor:'#575859',
+    height:'2px'
+  },
+  handleStyle: {
+    backgroundColor:'#000000',
+    width:'15px',
+    height:'15px',
+    boxShadow:'none',
+    borderColor: '#000000',
+  },
+};
