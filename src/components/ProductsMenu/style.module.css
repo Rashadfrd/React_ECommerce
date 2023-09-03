@@ -145,12 +145,18 @@
       height: 230px;
     }
   }
-  @media only screen and (max-width: 970px) {
+  @media only screen and (max-width: 971px) {
+    .prodSidebarFilter{
+      display: block;
+    }
     .productItemContainer{
         width: 33%
     }
     .prodImg{
       height:330px
+    }
+    .menu{
+      width:100%;
     }
   }
   @media only screen and (max-width: 850px) {
@@ -175,12 +181,6 @@
     }
     .prodImg{
       height:350px
-    }
-    .menu{
-      width:100%;
-    }
-    .prodSidebarFilter{
-      display: block;
     }
   }
   /* @media only screen and (max-width: 600px) {
