@@ -7,7 +7,6 @@ const AddToCard = ({product}) => {
     const [amount,setAmount] = useState(1);
     const{dispatch} = useCartContext()
 
-    
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch({
@@ -25,7 +24,7 @@ const AddToCard = ({product}) => {
   return (
     <form method='post' onSubmit={submitHandler}>
         <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', marginTop:'7%'}}>
-            <div style={{display:'flex', alignItems:'center', marginBottom:'2%'}}>
+            <div className={classes.inputWrapper}>
                 <TfiMinus style={{cursor:'pointer'}} onClick={() => {setAmount(amount - 1)}} size={22} />
                 <input className={classes.input} onChange={(e)=>{setAmount(e.target.value)}} value={amount} min={1} max={10} type='number' />
                 <TfiPlus style={{cursor:'pointer'}} onClick={() => {setAmount(amount + 1)}} size={22} />

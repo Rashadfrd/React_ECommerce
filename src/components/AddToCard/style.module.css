@@ -1,3 +1,12 @@
+.inputWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e2e2e2;
+    padding: 0 2%;
+    border-radius: 10px;
+}
 .input{
     padding:2%;
     margin-right:10px;
@@ -5,6 +14,8 @@
     font-size:20px;
     border-radius:10px;
     border: none;
+    width: 100%;
+    background-color: #e2e2e2;
     
 }
 .input:focus{
@@ -21,8 +32,9 @@
     border-radius:10px;
     background-color:white;
     transition:.3s;
-    padding:3% 2%;
+    padding:2% 2%;
     margin-top:8px;
+    width: 100%;
 
 }
 .submitBtn:hover{

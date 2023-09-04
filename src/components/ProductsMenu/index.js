@@ -119,7 +119,7 @@ const ProductsMenu = () => {
                     />
                   </Link>
                   <div className={classes.prodName}>
-                    {prod.name.charAt(0).toUpperCase() + prod.name.slice(1)}
+                    {prod.name.split(' ').length > 2 ? prod.name.split(' ').splice(0,2).join(' '): prod.name}
                   </div>
                   <div className={classes.prodPrice}>
                     <span className={classes.newPrice}>

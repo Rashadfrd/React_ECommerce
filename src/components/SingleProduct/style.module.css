@@ -1,0 +1,105 @@
+.singleProduct{
+    padding: 3% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.singleProductLeft, .singleProductRight{
+    width: 50%;
+}
+.singleProductLeftImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleProductLeftImg{
+    object-fit: contain;
+    width: 70%;
+    height: 100%;
+}
+.singleProductName{
+    font-size: 40px;
+}
+.singleProductDesc{
+    font-family: 'Space Grotesk', sans-serif; 
+    font-size: 17px;
+}
+
+.singleProductPrice{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.oldPrice{
+    text-decoration-line: line-through;
+    color: #868686;
+}
+.newPrice{
+    font-size: 26px;
+    font-weight: 500;
+}
+.singleProductCategoryCompany{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.singleProductCategoryCompany span{
+    font-weight: 500;
+}
+.singleProductReviews{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #868686;
+}
+.breadCrumb{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.breadCrumbItem{
+    text-decoration: none;
+    color: #8e8e8e;
+    font-size: 13px;
+}
+
+.singleProductCategoryColorAndSize{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.singleProductCategoryColor, .singleProductCategorySize{
+    display: flex;
+    align-items: center;
+}
+.singleProductCategoryColor span, .singleProductCategorySize span{
+    width: 10%;
+}
+.singleProductCategoryColor div, .singleProductCategorySize div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 230px;
+    padding: 10px;
+    border: 1px solid #868686;
+}
+.singleProductCategoryColor select, .singleProductCategorySize select{
+    width: 100%;
+    background-color: transparent;
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+.singleProductSelectIcon{
+    position: absolute;
+    right: 5%;
+    z-index: -1;
+}

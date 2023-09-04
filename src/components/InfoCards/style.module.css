@@ -1,7 +1,3 @@
-p{
-    margin: 0;
-    padding: 0;
-}
 .infoCard{
     font-family: 'Space Grotesk', sans-serif;
     padding: 5% 5%;
@@ -20,11 +16,15 @@ p{
 .textTitle{
     font-size: 19px;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 
 .textBody{
     color: #909090;
     font-size: 14px;
+    padding: 0;
+    margin: 0;
 }
 
 .line{

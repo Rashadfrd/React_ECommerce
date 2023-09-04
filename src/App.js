@@ -6,7 +6,7 @@ import CheckOut from './pages/CheckOut';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import SharedLayout from './pages/SharedLayout';
-import SingleProduct from './pages/SingleProduct';
+import SingleProduct from './pages/SingleProductPage';
 import PrivateRoute from './pages/PrivateRoute';
 import Contact from './pages/Contact';
 
